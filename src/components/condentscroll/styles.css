@@ -1,0 +1,56 @@
+/* General Styles */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Image Styling */
+.travel-image {
+  width: 250px;
+  max-height: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: auto; /* Centers image on all screen sizes */
+}
+
+/* Section Styling */
+.travel-section {
+  padding: 50px 20px;
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  .travel-section {
+      padding: 30px 15px;
+  }
+  
+  .mobile {
+      margin-top: 10px;
+  }
+  
+  .travel-image {
+      max-height: 400px; /* Ensures image fits properly */
+      width: 80%; /* Makes image responsive */
+  }
+}
+
+/* AOS Animation Enhancements */
+[data-aos] {
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out !important;
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+[data-aos].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+

@@ -1,0 +1,62 @@
+#home{
+    background-color: #A60F93;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideTextFromLeft {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .image-animate {
+    animation: slideInFromRight 1s ease-out;
+  }
+  
+  .text-animate {
+    animation: slideTextFromLeft 1s ease-out;
+  }
+  
+ /* Ensure navbar is full width and does not leave gaps */
+.navbar {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+/* Ensure the collapsed menu is properly aligned */
+.navbar-collapse {
+  justify-content: center;
+}
+
+/* Fix spacing for small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #A60F93; /* Match navbar color */
+    padding: 10px;
+    position: absolute;
+    top: 56px; /* Adjust based on navbar height */
+    width: 100%;
+    left: 0;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
