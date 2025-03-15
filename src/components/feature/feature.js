@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import image from "../../assert/Screenshot__74_-removebg-preview.png";
 import image1 from "../../assert/Screenshot__73_-removebg-preview.png";
 import image2 from "../../assert/Screenshot__72_-removebg-preview.png";
+import image3 from "../../assert/Screenshot__67_-removebg-preview.png"
 
 export default function FeaturesSection() {
     const [ref1, inView1] = useInView({ triggerOnce: false, threshold: 0.2 });
@@ -73,7 +74,7 @@ export default function FeaturesSection() {
                             {[" Live Tracking ", "Smart Travel Planner", " Trip Collaboration "].map((title, index) => (
                                 <Col md={4} className="text-center" key={index}>
                                     <motion.img
-                                        src={image1}
+                                        src={image3}
                                         height={100}
                                         width={60}
                                         alt={`${title} Icon`}
