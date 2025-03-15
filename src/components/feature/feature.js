@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import image from "../../assert/Screenshot__67_-removebg-preview.png";
+import image from "../../assert/Screenshot__74_-removebg-preview.png";
 import image1 from "../../assert/Screenshot__73_-removebg-preview.png";
 import image2 from "../../assert/Screenshot__72_-removebg-preview.png";
 
@@ -34,7 +34,7 @@ export default function FeaturesSection() {
                             Plan your extraordinary getaway.
                         </motion.h2>
                         <Row className="mt-4">
-                            {["Browse", "Book", "Travel"].map((title, index) => (
+                            {["Story Section", "Plan Preparation", "Travel"].map((title, index) => (
                                 <Col md={4} className="text-center" key={index}>
                                     <motion.img
                                         src={image2}
@@ -48,8 +48,8 @@ export default function FeaturesSection() {
                                     />
                                     <h5>{title}</h5>
                                     <p>
-                                        {title === "Browse" && "Search from our 65+ destinations based on your choice of region, company, and availability."}
-                                        {title === "Book" && "Book your stay with quick and easy steps using a secure payment method."}
+                                        {title === "Story Section" && " Share your travel experiences through pictures, videos, and blogs. Connect with other travelers and get inspired!"}
+                                        {title === "Plan Preparation" && "Easily create custom itineraries, manage expenses, and get AI-powered suggestions for must-visit spots."}
                                         {title === "Travel" && "And off you go, on yet another thrilling adventure. It’s that easy."}
                                     </p>
                                 </Col>
@@ -70,7 +70,7 @@ export default function FeaturesSection() {
                             Plan your extraordinary getaway.
                         </motion.h2>
                         <Row className="mt-4">
-                            {["Browse", "Book", "Travel"].map((title, index) => (
+                            {[" Live Tracking ", "Smart Travel Planner", " Trip Collaboration "].map((title, index) => (
                                 <Col md={4} className="text-center" key={index}>
                                     <motion.img
                                         src={image1}
@@ -84,9 +84,9 @@ export default function FeaturesSection() {
                                     />
                                     <h5>{title}</h5>
                                     <p>
-                                        {title === "Browse" && "Search from our 65+ destinations based on your choice of region, company, and availability."}
-                                        {title === "Book" && "Book your stay with quick and easy steps using a secure payment method."}
-                                        {title === "Travel" && "And off you go, on yet another thrilling adventure. It’s that easy."}
+                                        {title === " Live Tracking " && " Stay safe and connected by sharing your real-time location with friends and family."}
+                                        {title === "Smart Travel Planner" && "Get AI-powered recommendations for destinations, hotels, and activities."}
+                                        {title === " Trip Collaboration " && "Plan group trips easily! Share itineraries, expenses, and travel updates with your group in real time."}
                                     </p>
                                 </Col>
                             ))}

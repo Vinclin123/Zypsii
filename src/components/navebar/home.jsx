@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import image from './phone.png';
+import image from '../../assert/header.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './home.css';
 import { DiAppstore } from "react-icons/di";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
     const [animate, setAnimate] = useState(false);
@@ -21,24 +23,39 @@ const Home = () => {
 
                 <div className="col-md-6 text-center text-md-start">
                     <h1 className={`display-6 fw-bold mb-4 ${animate ? 'text-animate' : ''}`}>
-                        A Powerful App For Your <br /> <span className="fw-bolder">Business.</span>
+                    <ReactTyped strings={["A Powerful App For Your"]} typeSpeed={100} loop/>
+                         <br /> <span className="fw-bolder">Travel...</span>
                     </h1>
                     <p className={`mb-4 ${animate ? 'text-animate' : ''}`}>
-                        From open source to pro services, Piqes helps you to build, deploy, test, and monitor apps.
+                    🚀 Plan, Connect & Share Your Adventures – All in One App!
                     </p>
                     <div className={`d-flex justify-content-center justify-content-md-start gap-3 mt-5 ${animate ? 'text-animate' : ''}`}>
-                        <button className="btn btn-light btn-lg text-danger fw-semibold fs-6 p-3 "><DiAppstore />App Store</button>
-                        <button className="btn btn-outline-light btn-lg fw-semibold fs-6"><IoLogoGooglePlaystore />Google Play</button>
+                        <button className="btn btn-light btn-lg text-danger fw-semibold fs-6 p-3 "><DiAppstore size={30}/>App Store</button>
+                        <button className="btn btn-outline-light btn-lg fw-semibold fs-6"><IoLogoGooglePlaystore size={30} />Google Play</button>
                     </div>
                 </div>
 
-                <div className="col-md-6 d-flex justify-content-center mt-4 mt-md-0">
+                {/* <div className="col-md-6 d-flex justify-content-center mt-4 mt-md-0">
                     <img
                         src={image}
                         alt="App Mockup"
                         className={`img-fluid ${animate ? 'image-animate' : ''}`}
                     />
-                </div>
+                </div> */}
+                <motion.img
+                    src={image}
+                    alt="App Mockup"
+                    className="img-fluid col-md-6 d-flex justify-content-center mt-4 mt-md-0"
+                    animate={{
+                        x: [0, 5, -5, 5, 0],  // Move right and left
+                        y: [0, -5, 5, -5, 0], // Move up and down
+                    }}
+                    transition={{
+                        duration: 3.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                />
             </div>
         </div>
     );

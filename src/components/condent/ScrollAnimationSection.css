@@ -85,6 +85,11 @@
   .fade-right.animate {
     transform: translateX(0);
   }
+  .bttn {
+    background-color: #A60F93 !important;
+    color: white;
+  }
+  
   
   /* Responsive Design - Large Devices (992px and up) */
   @media (min-width: 992px) {

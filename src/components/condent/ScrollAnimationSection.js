@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ScrollAnimationSection.css";
 import img from "../../assert/app-ss1.png"
+import { TbBackground } from "react-icons/tb";
 
 const ScrollAnimation = () => {
   useEffect(() => {
@@ -43,12 +44,11 @@ const ScrollAnimation = () => {
           {/* Right Side - Text */}
           <div className="col-lg-6 col-md-6 content-container animate-on-scroll fade-left">
             <div className="text-container">
-              <h2 className="fw-bold mb-3">Seamless Loyalty</h2>
+              <h2 className="fw-bold mb-3">Start Your Journey Today! </h2>
               <p className="mb-4">
-                Collaborate over projects with your team and clients, optimized for
-                mobile and tablet.
+              Download the app & explore the world with ease.
               </p>
-              <button className="btn btn-danger btn-lg">Get Started</button>
+              <button className="btn bttn btn-lg">Get Started</button>
             </div>
           </div>
         </div>

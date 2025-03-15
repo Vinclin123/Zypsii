@@ -1,5 +1,5 @@
 #home{
-    background-color: #A60F93;
+  background-image: linear-gradient(to left, #b1239e, #A60F93);
 }
 
 @keyframes slideInFromRight {
