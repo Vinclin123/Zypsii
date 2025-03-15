@@ -158,7 +158,7 @@ const MyNavbar = () => {
             alt="Brand Logo"
             width="40" // Adjust size as needed
             height="40"
-            className="d-inline-block align-top me-2 border border-white rounded"
+            className="d-inline-block align-top me-2 border border-white rounded bg-white"
           />
           Zypsii
         </Navbar.Brand>
