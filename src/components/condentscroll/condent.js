@@ -36,6 +36,7 @@ const TravelSection = () => {
           />
         </motion.div>
         <motion.div 
+        id="explore"
           className="col-md-6"
           initial="hidden"
           whileInView="visible"
@@ -64,6 +65,7 @@ const TravelSection = () => {
           />
         </motion.div>
         <motion.div 
+        id="chat"
           className="col-md-6"
           initial="hidden"
           whileInView="visible"

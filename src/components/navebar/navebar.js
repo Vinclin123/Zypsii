@@ -148,7 +148,7 @@ const MyNavbar = () => {
       variant="dark"
       expand="lg"
       className="px-3"
-      style={{ backgroundColor: "#A60F93" }}
+      // style={{ backgroundColor: "#A60F93" }}
     >
       <Container>
         {/* Brand with Logo */}

@@ -10,7 +10,7 @@ import ScrollAnimationSection from "./components/condent/ScrollAnimationSection"
 const App = () => {
   return (
     <div>
-     <Navbar/>
+     {/* <Navbar/> */}
      <Home />
      <FeaturesSections/>
      <FeaturesSection/>

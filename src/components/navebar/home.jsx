@@ -1,64 +1,100 @@
-import React, { useEffect, useState } from "react";
-import image from '../../assert/header.png';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './home.css';
+import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JS
+import "./home.css"; // Custom CSS for styling
+import vedio from "../../assert/travel.mp4"
+import { useState, useRef } from "react";
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import logo from "../../assert/logo.png";
 import { DiAppstore } from "react-icons/di";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
-import { motion } from "framer-motion";
-import { ReactTyped } from "react-typed";
+const HeroSection = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
 
-const Home = () => {
-    const [animate, setAnimate] = useState(false);
+  // Toggle video mute/unmute
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+    }
+  };
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setAnimate(true);
-        }, 100);
-        return () => clearTimeout(timer);
-    }, []);
+  return (
+    <div className="hero-container">
+      {/* Background Video */}
+      <video ref={videoRef} autoPlay loop muted={isMuted} className="hero-video">
+        <source src={vedio} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-    return (
-        <div id="home" className="min-vh-100 d-flex align-items-center justify-content-center p-4" >
-            <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between text-white">
-
-                <div className="col-md-6 text-center text-md-start">
-                    <h1 className={`display-6 fw-bold mb-4 ${animate ? 'text-animate' : ''}`}>
-                    <ReactTyped strings={["A Powerful App For Your"]} typeSpeed={100} loop/>
-                         <br /> <span className="fw-bolder">Travel...</span>
-                    </h1>
-                    <p className={`mb-4 ${animate ? 'text-animate' : ''}`}>
-                    🚀 Plan, Connect & Share Your Adventures – All in One App!
-                    </p>
-                    <div className={`d-flex justify-content-center justify-content-md-start gap-3 mt-5 ${animate ? 'text-animate' : ''}`}>
-                        <button className="btn btn-light btn-lg text-danger fw-semibold fs-6 p-3 "><DiAppstore size={30}/>App Store</button>
-                        <button className="btn btn-outline-light btn-lg fw-semibold fs-6"><IoLogoGooglePlaystore size={30} />Google Play</button>
-                    </div>
-                </div>
-
-                {/* <div className="col-md-6 d-flex justify-content-center mt-4 mt-md-0">
-                    <img
-                        src={image}
-                        alt="App Mockup"
-                        className={`img-fluid ${animate ? 'image-animate' : ''}`}
-                    />
-                </div> */}
-                <motion.img
-                    src={image}
-                    alt="App Mockup"
-                    className="img-fluid col-md-6 d-flex justify-content-center mt-4 mt-md-0"
-                    animate={{
-                        x: [0, 5, -5, 5, 0],  // Move right and left
-                        y: [0, -5, 5, -5, 0], // Move up and down
-                    }}
-                    transition={{
-                        duration: 3.5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                />
-            </div>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div className="container">
+          <a className="navbar-brand d-flex align-items-center" href="#">
+            <img src={logo} alt="" width="30" height="40" className="d-inline-block align-text-top" />
+            <span className="logo-text ms-2 fw-bold text-white">Zypsii</span>
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+              <li className="nav-item"><a className="nav-link" href="#nearest">Nearest</a></li>
+              <li className="nav-item"><a className="nav-link" href="#track">Track</a></li>
+              
+              <li className="nav-item"><a className="nav-link" href="#explore">Explore</a></li>
+              <li className="nav-item"><a className="nav-link" href="#chat">chat</a></li>
+              <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-    );
+      </nav>
+
+      {/* Mute Button */}
+      <button
+        onClick={toggleMute}
+        className="btn position-absolute top-0 end-0 mt-5 mute-button"
+        style={{ zIndex: 1 }}
+      >
+        {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
+      </button>
+
+      {/* Content Overlay */}
+      <div className="hero-overlay">
+        <div className="container text-center text-white">
+          <h1 className="fw-bold">A Powerful App for Your Travel</h1>
+          <p>Plan, Connect & Share Your Adventures – All in One App!</p>
+
+          {/* Buttons */}
+          <div className="d-flex justify-content-center gap-3">
+            <button className="btn btn-primary"><DiAppstore size={30}/>App Store</button>
+            <button className="btn btn-dark "><IoLogoGooglePlaystore size={30} />Google Play</button>
+          </div>
+
+          {/* Explore & Plan Section */}
+          <div className="row mt-5">
+            <div className="col-md-6">
+              <h3>Explore the World</h3>
+              <p>Discover new places, meet new people, and create unforgettable memories.</p>
+            </div>
+            <div className="col-md-6">
+              <h3>Plan Your Trip</h3>
+              <p>Start planning today and make your next adventure the best one yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Home;
+export default HeroSection;

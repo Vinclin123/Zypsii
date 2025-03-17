@@ -43,7 +43,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="features-section text-center py-5">
+    <section ref={sectionRef} className="features-section text-center py-5" id="about">
       <h6 className="text-danger fw-bold">FEATURES</h6>
       <h2 className="fw-bold">Your Experience Gets Better Over Time</h2>
       <p className="text-muted">

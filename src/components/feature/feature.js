@@ -17,6 +17,7 @@ export default function FeaturesSection() {
                 <Row className="align-items-center">
                     <Col md={4} className="text-center">
                         <motion.img
+                        id="nearest"
                             src={image}
                             height={5}
                             alt="App Screenshot"
@@ -95,6 +96,7 @@ export default function FeaturesSection() {
                     </Col>
                     <Col md={4} className="text-center">
                         <motion.img
+                        id="track"
                             src={image1}
                             width={500}
                             alt="App Screenshot"
