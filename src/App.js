@@ -7,16 +7,20 @@ import Footer from "./components/footer/footer";
 import Home from "./components/navebar/home";
 import FeaturesSections from "./components/section/FeaturesSection";
 import ScrollAnimationSection from "./components/condent/ScrollAnimationSection";
+import AboutSection from "./components/about/about";
+
 const App = () => {
   return (
     <div>
-     {/* <Navbar/> */}
-     <Home />
-     <FeaturesSections/>
-     <FeaturesSection/>
-     <ScrollAnimationSection/>
-     <HomePage/>
-     <Footer/>
+      {/* <Navbar/> */}
+      <Home />
+      <ScrollAnimationSection />
+      <FeaturesSections />
+      <FeaturesSection />
+
+      <HomePage />
+      <AboutSection />
+      <Footer />
     </div>
   );
 };

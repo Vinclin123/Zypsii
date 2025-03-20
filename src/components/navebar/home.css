@@ -24,15 +24,24 @@
   justify-content: center;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
-  padding-top: 80px; /* Adjust for Navbar */
+  padding-top: 80px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 /* Mute Button */
 .mute-button {
   position: absolute;
-  top: 45px;
+  top: 15px;
   right: 40px;
-  /* background: rgba(0, 0, 0, 0.6); */
   color: rgb(0, 0, 0);
   border: none;
   font-size: 14px;
@@ -40,6 +49,8 @@
   padding: 8px 12px;
   border-radius: 5px;
   transition: 0.3s;
+  z-index: 1000;
+  margin-top: 70px !important;
 }
 
 .mute-button:hover {
@@ -54,8 +65,7 @@
 
 .navbar-nav .nav-link {
   font-size: 1rem;
-  /* margin-left: 15px; */
-  margin-bottom: 15px;
+  margin:auto;
   color: black;
 }
 
@@ -64,8 +74,57 @@
   .hero-overlay {
     padding: 20px;
   }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
   .mute-button {
     top: 60px;
     right: 10px;
+  }
+
+  .navbar-nav {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #333;
+    padding: 8px 0;
+  }
+
+  .d-flex.justify-content-center.gap-3 {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+
+  .d-flex.justify-content-center.gap-3 button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-overlay h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
   }
 }

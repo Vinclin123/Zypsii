@@ -3,14 +3,40 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Import Bootstrap JS
 import "./home.css"; // Custom CSS for styling
 import vedio from "../../assert/travel.mp4"
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import logo from "../../assert/logo.png";
 import { DiAppstore } from "react-icons/di";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
+import Typed from 'typed.js';
+
 const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        'A Powerful App for Your Travel',
+        'Inspire From The <span style="color: #b300b3;">World</span>',
+        'Plan Your Next Adventure',
+        'Explore the <span style="color: #b300b3;">World</span>'
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+      backDelay: 5000,
+      showCursor: true,
+      cursorChar: '|',
+      startDelay: 1000,
+      html: true
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   // Toggle video mute/unmute
   const toggleMute = () => {
@@ -29,31 +55,31 @@ const HeroSection = () => {
       </video>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-white fixed-top container-fluid">
         <div className="container">
           <a className="navbar-brand d-flex align-items-center" href="#">
             <img src={logo} alt="" width="30" height="40" className="d-inline-block align-text-top" />
-            <span className="logo-text ms-2 fw-bold text-white">Zypsii</span>
+            <span className="logo-text ms-2 fw-bold "style={{color:"#b300b3"}}>Zypsii</span>
           </a>
           <button
             className="navbar-toggler"
+            style={{color:"#b300b3"}}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" style={{backgroundColor:"#b300b3"}}></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-              <li className="nav-item"><a className="nav-link" href="#nearest">Nearest</a></li>
-              <li className="nav-item"><a className="nav-link" href="#track">Track</a></li>
-              
-              <li className="nav-item"><a className="nav-link" href="#explore">Explore</a></li>
-              <li className="nav-item"><a className="nav-link" href="#chat">chat</a></li>
-              <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            <ul className="navbar-nav" >
+              <li className="nav-item"><a className="nav-link fw-bold" href="#about" style={{color:"#b300b3"}}>About</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#nearest" style={{color:"#b300b3"}}>Nearest</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#track" style={{color:"#b300b3"}}  >Track</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#explore" style={{color:"#b300b3"}}>Explore</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#chat" style={{color:"#b300b3"}}>Chat</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#contact" style={{color:"#b300b3"}}>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -71,7 +97,9 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="hero-overlay">
         <div className="container text-center text-white">
-          <h1 className="fw-bold">A Powerful App for Your Travel</h1>
+          <h1 className="fw-bold">
+            <span ref={el}></span>
+          </h1>
           <p>Plan, Connect & Share Your Adventures – All in One App!</p>
 
           {/* Buttons */}

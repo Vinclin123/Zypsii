@@ -1,36 +1,47 @@
 /* General Styles */
 .container {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow-x: hidden;
 } 
 
 /* Image Styling */
 .travel-image {
-  width: 250px;
-  max-height: 400px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   border-radius: 10px;
   display: block;
-  margin: auto; /* Centers image on all screen sizes */
+  margin: auto;
+  object-fit: contain;
 }
 
 /* Section Styling */
 .travel-section {
-  padding: 50px 20px;
+  padding: 50px 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Responsive Padding */
 @media (max-width: 768px) {
   .travel-section {
-      padding: 30px 15px;
+    padding: 30px 0;
   }
   
   .mobile {
-      margin-top: 10px;
+    margin-top: 10px;
   }
   
   .travel-image {
-      max-height: 400px; /* Ensures image fits properly */
-      width: 80%; /* Makes image responsive */
+    max-width: 80%;
+    height: auto;
+  }
+
+  .container {
+    padding: 0 10px;
   }
 }
 
