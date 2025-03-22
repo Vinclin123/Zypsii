@@ -6,6 +6,7 @@ import { FaIdeal } from "react-icons/fa";
 import { MdOutlineInterests } from "react-icons/md";
 import { SiStorybook } from "react-icons/si";
 import { CiChat1 } from "react-icons/ci";
+import { color } from "framer-motion";
 const FeaturesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -44,7 +45,8 @@ const FeaturesSection = () => {
 
   return (
     <section ref={sectionRef} className="features-section text-center py-5" id="">
-      <h6 className="text-danger fw-bold">FEATURES</h6>
+      <h6 className="text fw-bold" style={{ color: "#b300b3" }}>FEATURES</h6>
+
       <h2 className="fw-bold">Your Experience Gets Better Over Time</h2>
       <p className="text-muted">
         Explore the powerful features that help your business grow with ease.
