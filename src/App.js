@@ -8,10 +8,11 @@ import Home from "./components/navebar/home";
 import FeaturesSections from "./components/section/FeaturesSection";
 import ScrollAnimationSection from "./components/condent/ScrollAnimationSection";
 import AboutSection from "./components/about/about";
-
+import Countdown from "./components/countdown/Countdown";
 const App = () => {
   return (
     <div>
+      <Countdown />
       {/* <Navbar/> */}
       <Home />
       <ScrollAnimationSection />

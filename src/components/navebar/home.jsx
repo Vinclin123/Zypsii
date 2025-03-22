@@ -18,9 +18,9 @@ const HeroSection = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'A Powerful App for Your Travel',
+        'A Powerful App for Your <span style="color: #b300b3;">Travel</span>',
         'Inspire From The <span style="color: #b300b3;">World</span>',
-        'Plan Your Next Adventure',
+        'Plan Your Next <span style="color: #b300b3;">Adventure</span>',
         'Explore the <span style="color: #b300b3;">World</span>'
       ],
       typeSpeed: 50,
@@ -74,11 +74,12 @@ const HeroSection = () => {
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav" >
-              <li className="nav-item"><a className="nav-link fw-bold" href="#about" style={{color:"#b300b3"}}>About</a></li>
+              
               <li className="nav-item"><a className="nav-link fw-bold" href="#nearest" style={{color:"#b300b3"}}>Nearest</a></li>
               <li className="nav-item"><a className="nav-link fw-bold" href="#track" style={{color:"#b300b3"}}  >Track</a></li>
               <li className="nav-item"><a className="nav-link fw-bold" href="#explore" style={{color:"#b300b3"}}>Explore</a></li>
               <li className="nav-item"><a className="nav-link fw-bold" href="#chat" style={{color:"#b300b3"}}>Chat</a></li>
+              <li className="nav-item"><a className="nav-link fw-bold" href="#about" style={{color:"#b300b3"}}>About</a></li>
               <li className="nav-item"><a className="nav-link fw-bold" href="#contact" style={{color:"#b300b3"}}>Contact</a></li>
             </ul>
           </div>
