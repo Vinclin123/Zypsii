@@ -111,11 +111,11 @@ const HeroSection = () => {
 
           {/* Explore & Plan Section */}
           <div className="row mt-5">
-            <div className="col-md-6">
+            <div className="col-md-6 fade-left">
               <h3>Explore the World</h3>
               <p>Discover new places, meet new people, and create unforgettable memories.</p>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 fade-right">
               <h3>Plan Your Trip</h3>
               <p>Start planning today and make your next adventure the best one yet.</p>
             </div>

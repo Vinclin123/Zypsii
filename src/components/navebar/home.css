@@ -42,7 +42,7 @@
   position: absolute;
   top: 15px;
   right: 40px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 14px;
   cursor: pointer;
@@ -55,7 +55,7 @@
 
 .mute-button:hover {
   background: rgba(15, 15, 15, 0.8);
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 /* Navbar Customization */
@@ -126,5 +126,40 @@
 
   .logo-text {
     font-size: 1.2rem;
+  }
+}
+
+/* Fade Animations */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

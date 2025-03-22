@@ -1,3 +1,29 @@
+/* Add these global styles at the top of the file */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar for specific components */
+.countdown-container,
+.features-preview,
+.newsletter,
+.popup-content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.countdown-container::-webkit-scrollbar,
+.features-preview::-webkit-scrollbar,
+.newsletter::-webkit-scrollbar,
+.popup-content::-webkit-scrollbar {
+  display: none;
+}
+
 body.countdown-active {
   overflow: hidden;
   position: fixed;

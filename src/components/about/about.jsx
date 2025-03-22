@@ -45,7 +45,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             variants={fadeInLeft}
           >
-            <img src={aboutImg1} alt="Travel Experience" className="img-fluid rounded shadow" />
+            <img src={aboutImg1} alt="Travel Experience" className="img-fluid" />
           </motion.div>
           <motion.div 
             className="col-md-6"
@@ -135,7 +135,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             variants={fadeInRight}
           >
-            <img src={aboutImg2} alt="Travel Mission" className="img-fluid rounded shadow" />
+            <img src={aboutImg2} alt="Travel Mission" className="img-fluid" />
           </motion.div>
         </div>
 

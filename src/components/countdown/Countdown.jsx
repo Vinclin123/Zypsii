@@ -13,7 +13,7 @@ const Countdown = () => {
 
   // Set your launch date here (e.g., 30 days from now)
   const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() );
+  launchDate.setDate(launchDate.getDate() );//lanch time in like +1 inside the parathesis
 
   useEffect(() => {
     // Add scroll lock class when component mounts
@@ -103,13 +103,13 @@ const Countdown = () => {
               </div>
             </div>
 
-            <div className="newsletter">
+            {/* <div className="newsletter">
               <h3>Get Notified When We Launch</h3>
               <form className="newsletter-form">
                 <input type="email" placeholder="Enter your email" />
                 <button type="submit">Notify Me</button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       ) : (
