@@ -19,7 +19,7 @@ const HeroSection = () => {
     const typed = new Typed(el.current, {
       strings: [
         'A Powerful App for Your <span style="color: #b300b3;">Travel</span>',
-        'Inspire From The <span style="color: #b300b3;">World</span>',
+        'Inspired by into the <span style="color: #b300b3;">World</span>',
         'Plan Your Next <span style="color: #b300b3;">Adventure</span>',
         'Explore the <span style="color: #b300b3;">World</span>'
       ],

@@ -51,7 +51,7 @@ export default function FeaturesSection() {
                                     <h5>{title}</h5>
                                     <p>
                                         {title === "Story Section" && " Share your travel experiences through pictures, videos, and blogs. Connect with other travelers and get inspired!"}
-                                        {title === "Plan Preparation" && "Easily create custom itineraries, manage expenses, and get AI-powered suggestions for must-visit spots."}
+                                        {title === "Plan Preparation" && "Easily create custom itineraries"}
                                         {title === "Travel" && "And off you go, on yet another thrilling adventure. It’s that easy."}
                                     </p>
                                 </Col>
@@ -87,8 +87,8 @@ export default function FeaturesSection() {
                                     <h5>{title}</h5>
                                     <p>
                                         {title === " Live Tracking " && " Stay safe and connected by sharing your real-time location with friends and family."}
-                                        {title === "Smart Travel Planner" && "Get AI-powered recommendations for destinations, hotels, and activities."}
-                                        {title === " Trip Collaboration " && "Plan group trips easily! Share itineraries, expenses, and travel updates with your group in real time."}
+                                        {title === "Smart Travel Planner" && "Get recomendations for destinations, hotels, and activities."}
+                                        {title === " Trip Collaboration " && "Plan group trips easily! Share itineraries, and travel updates with your group in real time."}
                                     </p>
                                 </Col>
                             ))}
