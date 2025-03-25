@@ -21,11 +21,11 @@ const Footer = () => {
           </Col>
           <Col md={4} xs={12}>
             <h5>Contact Us</h5>
-            <p>Email: contact@example.com <br></br> Phone: +123 456 7890</p>
+            <p>Email: support@zypsii.com <br></br> Phone: +91 8970559490</p>
           </Col>
         </Row>
         <hr className="bg-light" />
-        <p className="text-center">&copy; 2025 MyWebsite. All Rights Reserved.</p>
+        <p className="text-center">&copy; 2025 Zypsii. All Rights Reserved.</p>
       </Container>
     </footer>
   );
