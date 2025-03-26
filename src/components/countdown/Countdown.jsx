@@ -12,8 +12,8 @@ const Countdown = () => {
 
   // Set your launch date here with a fixed date
   const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() ); // Set to tomorrow
-  // launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM
+  launchDate.setDate(launchDate.getDate() +1); // Set to tomorrow
+  launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM
 
   useEffect(() => {
     // Add scroll lock class when component mounts
