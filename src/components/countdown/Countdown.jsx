@@ -3,7 +3,6 @@ import './Countdown.css';
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -11,9 +10,10 @@ const Countdown = () => {
   const [isExpired, setIsExpired] = useState(false);
   const [showLaunchPopup, setShowLaunchPopup] = useState(false);
 
-  // Set your launch date here (e.g., 30 days from now)
-  const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() );//lanch time in like +1 inside the parathesis
+ // Set your launch date here with a fixed date
+ const launchDate = new Date();
+ launchDate.setDate(launchDate.getDate() + 1); // Set to tomorrow
+ launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM
 
   useEffect(() => {
     // Add scroll lock class when component mounts
@@ -31,8 +31,7 @@ const Countdown = () => {
       }
 
       setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(distance / (1000 * 60 * 60)),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000)
       });
@@ -63,10 +62,6 @@ const Countdown = () => {
             <h1>Zypsii App</h1>
             <p className="launch-text">Launching Soon!</p>
             <div className="countdown-timer">
-              <div className="time-block">
-                <span className="number">{timeLeft.days}</span>
-                <span className="label">Days</span>
-              </div>
               <div className="time-block">
                 <span className="number">{timeLeft.hours}</span>
                 <span className="label">Hours</span>
@@ -99,6 +94,14 @@ const Countdown = () => {
                 <div className="feature-item">
                   <i className="fas fa-comments"></i>
                   <p>Travel Chat</p>
+                </div>
+                <div className="feature-item">
+                  <i className="fa-solid fa-sign-hanging" ></i>
+                  <p>Share Your Moments</p>
+                </div>
+                <div className="feature-item">
+                  <i className="fa-solid fa-globe"></i>
+                  <p>Discover Places</p>
                 </div>
               </div>
             </div>

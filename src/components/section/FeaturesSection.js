@@ -47,10 +47,10 @@ const FeaturesSection = () => {
     <section ref={sectionRef} className="features-section text-center py-5" id="Features">
       <h6 className="text fw-bold" style={{ color: "#b300b3" }}>FEATURES</h6>
 
-      <h2 className="fw-bold">Your Experience Gets Better Over Time</h2>
-      <p className="text-muted">
+      <h2 className="fw-bold">Discover the amazing features that make your trip unforgettable</h2>
+      {/* <p className="text-muted">
         Explore the powerful features that help your business grow with ease.
-      </p>
+      </p> */}
 
       <div className="container">
         <div className="row justify-content-center mt-4">
