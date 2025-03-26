@@ -28,8 +28,11 @@
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
 }
 
 .hero-overlay p {
@@ -76,7 +79,7 @@
   }
 
   .hero-overlay h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-overlay p {
@@ -113,7 +116,8 @@
 
 @media (max-width: 576px) {
   .hero-overlay h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    margin-top: 60px;
   }
 
   .hero-overlay p {
@@ -126,6 +130,36 @@
 
   .logo-text {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-overlay h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-overlay h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
   }
 }
 
@@ -161,5 +195,16 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

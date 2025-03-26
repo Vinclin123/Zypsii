@@ -18,6 +18,7 @@ const HeroSection = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
+        'Launching Soon...',
         'A Powerful App to connect <span style="color: #b300b3;">Traveler\'s</span>',
         'Inspired by <span style="color: #b300b3;"> into the world</span>',
         'Plan your next <span style="color: #b300b3;">adventure</span>',
@@ -97,6 +98,7 @@ const HeroSection = () => {
       {/* Content Overlay */}
       <div className="hero-overlay">
         <div className="container text-center text-white">
+         
           <h1 className="fw-bold">
             <span ref={el}></span>
           </h1>
@@ -111,7 +113,7 @@ const HeroSection = () => {
           {/* Explore & Plan Section */}
           <div className="row mt-5">
             <div className="col-md-6 fade-left">
-              <h3>Explore the World</h3>
+              <h3>Explore the World with us</h3>
               <p>Discover new places, meet new people, and create unforgettable memories.</p>
             </div>
             <div className="col-md-6 fade-right">
