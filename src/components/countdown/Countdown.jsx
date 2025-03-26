@@ -12,7 +12,7 @@ const Countdown = () => {
 
   // Set your launch date here with a fixed date
   const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate()) +1; // Set to tomorrow
+  launchDate.setDate(launchDate.getDate() +1); // Set to tomorrow
   launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const Countdown = () => {
       {!isExpired ? (
         <div className="countdown-container">
           <div className="countdown-content">
-            <h1>Zypsii App</h1>
+            <h1>Zypsii</h1>
             <p className="launch-text">Launching Soon!</p>
             <div className="countdown-timer">
               <div className="time-block">
