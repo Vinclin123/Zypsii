@@ -23,11 +23,23 @@
   
   /* Feature Icon */
   .feature-icon {
-    width: 50px;
-    height: 50px;
-    /* background: #A60F93; */
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b300b3;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .feature-card:hover .feature-icon {
+    transform: translateY(-5px);
   }
   
   /* Mobile Optimization */
@@ -36,6 +48,11 @@
       width: 100%;
       max-width: 320px;
       margin: 15px auto;
+    }
+    
+    .feature-icon {
+      width: 50px;
+      height: 50px;
     }
   }
   

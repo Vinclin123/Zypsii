@@ -69,7 +69,7 @@ export default function FeaturesSection() {
                             initial={{ opacity: 0 }} 
                             animate={inView2 ? { opacity: 1 } : {}} 
                             transition={{ duration: 1 }}>
-                            Plan your extraordinary getaway.
+                            Track Your Trip Updates.
                         </motion.h2>
                         <Row className="mt-4">
                             {[" Live Tracking ", "Smart Travel Planner", " Trip Collaboration "].map((title, index) => (

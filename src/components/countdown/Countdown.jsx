@@ -60,7 +60,7 @@ const Countdown = () => {
       {!isExpired ? (
         <div className="countdown-container">
           <div className="countdown-content">
-            <h1>Zypsii Travel App</h1>
+            <h1>Zypsii App</h1>
             <p className="launch-text">Launching Soon!</p>
             <div className="countdown-timer">
               <div className="time-block">
@@ -119,7 +119,7 @@ const Countdown = () => {
               <div className="rocket">🚀</div>
             </div>
             <h2>We're Live!</h2>
-            <p>Zypsii Travel App is now officially launched!</p>
+            <p>Zypsii App is now officially launched!</p>
             <button className="explore-button" onClick={handleExplore}>
               Explore Now
             </button>
