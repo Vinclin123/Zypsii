@@ -12,8 +12,7 @@ const Countdown = () => {
 
   // Set your launch date here with a fixed date
   const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() +1); // Set to tomorrow
-  launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM
+  launchDate.setHours(7, 0, 0, 0); // Set to 7:00 AM today
 
   useEffect(() => {
     // Add scroll lock class when component mounts
@@ -122,7 +121,7 @@ const Countdown = () => {
               <div className="rocket">🚀</div>
             </div>
             <h2>We're Live!</h2>
-            <p>Welcome to the Zypsii World</p>
+            <p>Welcome to the Zypsii World</p>
             <button className="explore-button" onClick={handleExplore}>
               Explore Now
             </button>
